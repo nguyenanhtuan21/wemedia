@@ -1,0 +1,26 @@
+services:
+
+  wordpress:
+    image: wordpress
+    restart: always
+    ports:
+      - 8080:80
+    # environment:
+    #   WORDPRESS_DB_HOST: db
+    #   WORDPRESS_DB_USER: wemedia_user
+    #   WORDPRESS_DB_PASSWORD: 'adgasdfasasdfa234523@@.@'
+    #   WORDPRESS_DB_NAME: wemedia_db
+    volumes:
+      - ./wemedia:/var/www/html
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: wemedia_db
+      MYSQL_USER: wemedia_user
+      MYSQL_PASSWORD: 'adgasdfasasdfa234523@@.@'
+      MYSQL_ROOT_PASSWORD: '123123456'
+    volumes:
+      - ./db:/var/lib/mysql
+

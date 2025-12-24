@@ -1,0 +1,390 @@
+/* #region common */
+body {
+    box-sizing: border-box;
+    font-family: Inter;
+}
+section.home {
+    padding-top: 176.42px;
+    background: #000;
+    color: #fff;
+}
+@media screen and (max-width: 767px){
+    header .custom-logo-link img, .ast-header-break-point .site-branding img, .ast-header-break-point .custom-logo-link img {
+        width: auto;
+        height: 60px;
+    }
+    .ast-builder-grid-row {
+        height: 60px;
+    }
+    section.home {
+        padding-top: 60px;
+    }
+}
+/* #endregion */
+
+/* #region hero */
+
+@media screen and (min-width: 980px){
+    
+    .hero-img-wrapper img {
+        width: 100%;
+        border-bottom: none;
+    }
+    .hero {
+        width: 100%;
+        height: calc(100vh - 176.42px);
+    }
+}
+.hero-img-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.hero {
+    width: 100%;
+    position: relative;
+}
+.hero-img-wrapper {
+    position: relative;
+}
+
+.hero:before {
+    position: absolute;
+    content: "";
+    width: 883px;
+    height: 2px;
+    background: #64DAAB;
+    bottom: 0;
+    left: calc(50% - 441.5px);
+    z-index: 1;
+}
+@media screen and (max-width: 767px){
+    .hero-img-wrapper img {
+        width: 100%;
+        border-bottom: 2px solid #64DAAB;
+    }
+    .hero:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #64DAAB;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
+/* #endregion */
+
+/* #region about us */
+@media screen and (min-width: 980px){
+    section.about-us {
+        height: calc(100vh - 71px);
+    }    
+}
+section.about-us {
+    background: url(/sites/images/home/bg-about-us.png);
+    padding: 80px 0;
+    background-size: cover;
+    position: relative;
+}
+section.about-us:before {
+    position: absolute;
+    content: "";
+    width: 883px;
+    height: 2px;
+    background: #64DAAB;
+    bottom: 0;
+    left: calc(50% - 441.5px);
+    z-index: 1;
+}
+h2.common-title {
+    font-size: 96px;
+    font-family: Inter;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.ab-content {
+    font-size: 20px;
+    font-family: 'Inter';
+    font-weight: 500;
+    max-width: 831px;
+}
+
+.ab-content > div {
+    padding-bottom: 16px;
+}
+
+.ab-feedback {
+    text-align: right;
+    font-size: 30px;
+}
+
+.ab-feedback > div {
+    padding-bottom: 24px;
+}
+
+@media screen and (max-width: 767px){
+    section.about-us {
+        padding: 30px 0
+    }
+    h2.common-title{
+        font-size: 32px;
+    }
+    section.about-us:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #64DAAB;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .ab-content {
+        font-size: 16px;
+        font-family: 'Inter';
+        font-weight: 500;
+        max-width: 831px;
+    }
+    
+    .ab-content > div {
+        padding-bottom: 8px;
+    }
+    
+    .ab-feedback {
+        text-align: right;
+        font-size: 18px;
+    }
+    
+    .ab-feedback > div {
+        padding-bottom: 16px;
+    }
+
+}
+/* #endregion */
+
+/* #region our service  */
+.os-viewmore {
+    display: none;
+}
+@media screen and (min-width: 980px){
+    section.our-service {
+        height: calc(100vh - 71px);
+    }    
+}
+section.our-service {
+    background: url(/sites/images/home/bg-our-service.png);
+    background-size: cover;
+    padding: 80px 0 150px;
+    position: relative;
+}
+/* section.our-service:before {
+    position: absolute;
+    content: "";
+    width: 883px;
+    height: 2px;
+    background: #64DAAB;
+    bottom: 0;
+    left: calc(50% - 441.5px);
+    z-index: 1;
+} */
+.our-service-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    grid-gap: 53px 104px;
+    font-size: 30px;
+    font-family: 'Inter';
+    font-weight: 600;
+    padding-top: 32px;
+}
+
+.our-service-box > div {
+    border: 2px solid #64DAAB;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.our-service-box > div:hover {
+    text-decoration: underline;
+}
+
+.our-service-box > div:hover .os-viewmore {
+    display: block;
+    position: absolute;
+    top: -34px;
+}
+
+@media screen and (max-width: 767px){
+    section.our-service {
+        padding: 30px 0 30px;
+    }
+    .our-service-box {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 16px 16px;
+        font-size: 16px;
+        font-family: 'Inter';
+        font-weight: 600;
+        padding-top: 16px;
+    }
+    /* section.our-service:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #64DAAB;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    } */
+}
+/* #endregion */
+/* #region our clients */
+section.our-clients {
+    padding: 80px 0 0;
+    position: relative;
+}
+
+section.our-clients:before {
+    position: absolute;
+    content: "";
+    width: 883px;
+    height: 2px;
+    background: #64DAAB;
+    bottom: 0;
+    left: calc(50% - 441.5px);
+    z-index: 1;
+}
+@media screen and (max-width: 767px){
+    section.our-clients {
+        padding: 30px 0 0;
+        position: relative;
+    }
+
+    section.our-clients:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #64DAAB;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
+/* #endregion */
+
+/* #region contact */
+h2.contact-title {
+    font-size: 54px;
+    font-family: 'Inter';
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.contact {
+    padding: 80px 0;
+}
+
+.contact-des {
+    font-size: 26px;
+    font-weight: 600;
+    padding-bottom: 32px;
+}
+.contact-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 120px;
+}
+
+.contact-address span {
+    font-size: 21px;
+    font-family: 'Inter';
+}
+
+.contact-address-box {
+    padding: 16px 0 0;
+}
+
+.contact-address-box > div {}
+
+.contact-address-box > div {
+    position: relative;
+    padding: 0 0 16px 40px;
+}
+
+.contact-address-box > div:nth-child(1):before {
+    position: absolute;
+    content: url(/sites/images/home/ic-location.svg);
+    top: 5px;
+    left: 0;
+}
+.contact-address-box > div:nth-child(2):before {
+    position: absolute;
+    content: url(/sites/images/home/ic-phone.svg);
+    top: -3px;
+    left: 0;
+}
+.srfm-form-container .srfm-form {
+    column-gap: 0 !important;
+    row-gap: 0 !important;
+}
+.srfm-form-container .srfm-form .srfm-block:not(.srfm-number-block) .srfm-input-common , 
+.srfm-form-container .srfm-form .srfm-block .srfm-dropdown-common-wrap .srfm-dropdown-common .ts-control{
+    border-radius: 50px;
+    border: 1px solid #fff !important
+}
+
+@media screen and (max-width: 979px){
+    .contact-col {
+        grid-gap: 32px;
+    }
+    .contact {
+        padding: 40px 0;
+    }
+    .contact-des {
+        font-size: 18px;
+        font-weight: 600;
+        padding-bottom: 16px;
+    }
+    
+    .contact-address span {
+        font-size: 16px;
+        font-family: 'Inter';
+    }
+    h2.contact-title {
+        font-size: 32px;
+        font-family: 'Inter';
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .contact-col {
+        grid-gap: 24px;
+        grid-template-columns: 1fr;
+    }
+    .contact {
+        padding: 30px 10px;
+    }
+    .contact-des {
+        font-size: 16px;
+        font-weight: 600;
+        padding-bottom: 16px;
+    }
+    
+    .contact-address span {
+        font-size: 16px;
+        font-family: 'Inter';
+    }
+    h2.contact-title {
+        font-size: 32px;
+    }
+}
+/* #endregion */
