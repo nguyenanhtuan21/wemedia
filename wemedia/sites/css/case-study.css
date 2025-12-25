@@ -1,0 +1,319 @@
+
+/* #region hero */
+
+@media screen and (min-width: 980px){
+    
+    .hero-img-wrapper img {
+        width: 100%;
+        border-bottom: none;
+    }
+    .hero {
+        width: 100%;
+        height: calc(100vh - 176.42px);
+    }
+}
+.hero-img-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.hero {
+    width: 100%;
+    position: relative;
+    background: url(/sites/images/case-study/banner-1.webp);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+h1.title {
+    font-size: 96px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    -webkit-transform: translate(-50%, -50%) !;
+    -moz-transform: translate(-50%, -50%) !;
+    -ms-transform: translate(-50%, -50%) !;
+    -o-transform: translate(-50%, -50%) !;
+}
+.hero-img-wrapper {
+    position: relative;
+}
+
+.hero:before {
+    position: absolute;
+    content: "";
+    width: 883px;
+    height: 2px;
+    background: #64DAAB;
+    bottom: 0;
+    left: calc(50% - 441.5px);
+    z-index: 1;
+}
+@media screen and (max-width: 1366px){
+    .hero {
+        background-size: 100%;
+    }
+}
+@media screen and (max-width: 979px){
+    h1.title {
+        font-size: 48px;
+    }
+    .hero {
+        width: 100%;
+        height: 500px;
+    }
+}
+@media screen and (max-width: 767px){
+    h1.title {
+        font-size: 32px;
+    }
+    .hero-img-wrapper img {
+        width: 100%;
+        border-bottom: 2px solid #64DAAB;
+    }
+    .hero:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #64DAAB;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .hero {
+        width: 100%;
+        height: 300px;
+    }
+}
+/* #endregion */
+
+/* #region project */
+#project-section {
+    padding: 80px 0;
+}
+
+.project-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 42px 84px;
+}
+
+.image-box-wrap {
+    position: relative;
+}
+
+.pj-text {
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 36px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(269.39deg, rgba(0, 0, 0, 0) 2.77%, #000000 97.41%);
+    opacity: 0.8;
+    color: #fff;
+}
+
+.pj-text a, .pj-text span {
+    color: #fff;
+    text-decoration: none;
+}
+
+.pj-text a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.pj-text span {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 979px){
+    .project-box {
+        gap: 36px;
+    }
+    .pj-text a {
+        font-size: 16px
+    }
+    .pj-text {
+        padding-left: 15px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    #project-section {
+        padding: 30px 0
+    }
+    .project-box {
+        gap: 15px;
+    }
+    .pj-text{
+        padding: 10px 0 10px 10px
+    }
+    .pj-text a {
+        font-size: 14px
+    }
+}
+/* #endregion */
+/* #region our clients */
+section.our-partner {
+    padding: 80px 0 0;
+    position: relative;
+}
+.common-title {
+    text-transform: unset;
+    font-size: 48px;
+    text-align: center;
+}
+section.our-partner:before {
+    position: absolute;
+    content: "";
+    width: 883px;
+    height: 2px;
+    background: #64DAAB;
+    bottom: 0;
+    left: calc(50% - 441.5px);
+    z-index: 1;
+}
+@media screen and (max-width: 767px){
+    section.our-partner {
+        padding: 30px 0 0;
+        position: relative;
+    }
+    .common-title {
+        font-size: 32px;
+    }
+    section.our-partner:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #64DAAB;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
+/* #endregion */
+
+/* #region contact */
+
+h2.contact-title {
+    font-size: 54px;
+    font-family: 'Inter';
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.contact {
+    padding: 80px 0;
+    font-family: Inter;
+}
+
+.contact-des {
+    font-size: 26px;
+    font-weight: 600;
+    padding-bottom: 32px;
+}
+.contact-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 120px;
+}
+
+.contact-address span {
+    font-size: 21px;
+    font-family: 'Inter';
+}
+
+.contact-address-box {
+    padding: 16px 0 0;
+}
+
+.srfm-submit-container {
+    font-family: Inter;
+}
+
+.contact-address-box > div {
+    position: relative;
+    padding: 0 0 16px 40px;
+}
+
+.contact-address-box > div:nth-child(1):before {
+    position: absolute;
+    content: url(/sites/images/home/ic-location.svg);
+    top: 5px;
+    left: 0;
+}
+.contact-address-box > div:nth-child(2):before {
+    position: absolute;
+    content: url(/sites/images/home/ic-phone.svg);
+    top: -3px;
+    left: 0;
+}
+.srfm-form-container .srfm-form {
+    column-gap: 0 !important;
+    row-gap: 0 !important;
+}
+.srfm-form-container .srfm-form .srfm-block:not(.srfm-number-block) .srfm-input-common , 
+.srfm-form-container .srfm-form .srfm-block .srfm-dropdown-common-wrap .srfm-dropdown-common .ts-control{
+    border-radius: 50px;
+    border: 1px solid #fff !important
+}
+
+@media screen and (max-width: 979px){
+    .contact-col {
+        grid-gap: 32px;
+    }
+    .contact {
+        padding: 40px 0;
+    }
+    .contact-des {
+        font-size: 18px;
+        font-weight: 600;
+        padding-bottom: 16px;
+    }
+    
+    .contact-address span {
+        font-size: 16px;
+        font-family: 'Inter';
+    }
+    h2.contact-title {
+        font-size: 32px;
+        font-family: 'Inter';
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .contact-col {
+        grid-gap: 24px;
+        grid-template-columns: 1fr;
+    }
+    .contact {
+        padding: 30px 10px;
+    }
+    .contact-des {
+        font-size: 16px;
+        font-weight: 600;
+        padding-bottom: 16px;
+    }
+    
+    .contact-address span {
+        font-size: 16px;
+        font-family: 'Inter';
+    }
+    h2.contact-title {
+        font-size: 32px;
+    }
+}
+/* #endregion */

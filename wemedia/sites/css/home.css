@@ -1,26 +1,3 @@
-/* #region common */
-body {
-    box-sizing: border-box;
-    font-family: Inter;
-}
-section.home {
-    padding-top: 176.42px;
-    background: #000;
-    color: #fff;
-}
-@media screen and (max-width: 767px){
-    header .custom-logo-link img, .ast-header-break-point .site-branding img, .ast-header-break-point .custom-logo-link img {
-        width: auto;
-        height: 60px;
-    }
-    .ast-builder-grid-row {
-        height: 60px;
-    }
-    section.home {
-        padding-top: 60px;
-    }
-}
-/* #endregion */
 
 /* #region hero */
 
@@ -43,6 +20,8 @@ section.home {
     width: 100%;
     position: relative;
 }
+
+
 .hero-img-wrapper {
     position: relative;
 }
@@ -57,7 +36,135 @@ section.home {
     left: calc(50% - 441.5px);
     z-index: 1;
 }
+.swiper {
+    width: 100vw;
+    height: calc(100vh - 176.42px);
+}
+.swiper-slide.slide-1{
+    background: url(/sites/images/home/img-banner-1.webp);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+.swiper-slide.slide-2 {
+    background: url(/sites/images/home/img-banner-2.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slide-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0;
+    text-align: center;
+    margin-top: -190px;
+}
+
+.num-large {
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 100px;
+}
+
+.num-large span {
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.slide-wrapper > div > div:nth-child(2) {
+    font-size: 20px;
+}
+
+.slide-wrapper > div {
+    padding: 0 40px;
+    border-right: 2px solid #64DAAB;
+    min-width: 266px;
+}
+
+.slide-wrapper > div:nth-child(1) {
+    border-left: 2px solid #64DAAB;
+}
+@media screen and (max-width: 1440px){
+    .swiper-slide.slide-1{
+        background: url(/sites/images/home/img-banner-1.webp);
+        background-size: 95%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+@media screen and (max-width: 979px){
+    .swiper-slide.slide-2 {
+        background: url(/sites/images/home/img-banner-2.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .swiper-slide.slide-1{
+        background: url(/sites/images/home/img-banner-1.webp);
+        background-size: 130%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .num-large {
+        font-family: 'Inter';
+        font-weight: bold;
+        font-size: 50px;
+    }
+     .swiper {
+        width: 100vw;
+        height: 600px;
+    }
+    .num-large span {
+        font-family: 'Inter';
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .slide-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 0;
+        gap:32px;
+    }
+    .slide-wrapper > div {
+        padding: 0 20px;
+        border-right: none;
+        /* width: 185px !important; */
+    }
+    
+    .slide-wrapper > div:nth-child(1) {
+        border-left: none;
+    }
+}
 @media screen and (max-width: 767px){
+    .swiper {
+        width: 100vw;
+        height: 400px;
+    }
+    .slide-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 0;
+        gap: 24px;
+    }
+    .slide-wrapper > div {
+        min-width: unset;
+    }
+    .num-large{
+        font-size: 60px;
+    }
+    .slide-wrapper > div > div:nth-child(2) {
+        font-size: 24px;
+    }
     .hero-img-wrapper img {
         width: 100%;
         border-bottom: 2px solid #64DAAB;
@@ -82,7 +189,7 @@ section.home {
     }    
 }
 section.about-us {
-    background: url(/sites/images/home/bg-about-us.png);
+    background: url(/sites/images/home/bg-about-us.webp);
     padding: 80px 0;
     background-size: cover;
     position: relative;
@@ -173,7 +280,7 @@ h2.common-title {
     }    
 }
 section.our-service {
-    background: url(/sites/images/home/bg-our-service.png);
+    background: url(/sites/images/home/bg-our-service.webp);
     background-size: cover;
     padding: 80px 0 150px;
     position: relative;
@@ -280,6 +387,7 @@ section.our-clients:before {
 /* #endregion */
 
 /* #region contact */
+
 h2.contact-title {
     font-size: 54px;
     font-family: 'Inter';
@@ -289,6 +397,7 @@ h2.contact-title {
 
 .contact {
     padding: 80px 0;
+    font-family: Inter;
 }
 
 .contact-des {
@@ -311,7 +420,9 @@ h2.contact-title {
     padding: 16px 0 0;
 }
 
-.contact-address-box > div {}
+.srfm-submit-container {
+    font-family: Inter;
+}
 
 .contact-address-box > div {
     position: relative;
